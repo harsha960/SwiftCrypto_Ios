@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "672A2ADA-86DF-4C0A-9DC1-604FCA2F5538"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C233735A-4F8A-4A18-A666-FF3C89241871"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftCrypto/Core/Home/Views/CoinRowView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "CoinRowView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1DFA519-B452-4353-8A99-E7FB1C1249E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftCrypto/SwiftCryptoApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "SwiftCryptoApp"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "A1DFA519-B452-4353-8A99-E7FB1C1249E8 - fb0ab77e97c641bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of SwiftCrypto.SwiftCryptoApp.vm : SwiftCrypto.HomeViewModel"
+                  moduleName = "SwiftCrypto"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harshavardhanravipati/Desktop/project/SwiftCrypto/SwiftCrypto/SwiftCryptoApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "A1DFA519-B452-4353-8A99-E7FB1C1249E8 - cb6baa5469aaf83c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftCrypto.SwiftCryptoApp.init() -&gt; SwiftCrypto.SwiftCryptoApp"
+                  moduleName = "SwiftCrypto"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harshavardhanravipati/Desktop/project/SwiftCrypto/SwiftCrypto/SwiftCryptoApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "516DD015-887D-48BD-8A79-DC474C7693CA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftCrypto/Core/Details/Views/DetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "DetailLoadingView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75C3B9DD-4AAD-40D4-80B1-CBCB649F9C68"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftCrypto/Models/CoinDetailModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "CoinDetailModel"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "75C3B9DD-4AAD-40D4-80B1-CBCB649F9C68 - 1851df76847e89b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftCrypto.CoinDetailModel.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;SwiftCrypto.CoinDetailModel.CodingKeys&gt;"
+                  moduleName = "SwiftCrypto"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harshavardhanravipati/Desktop/project/SwiftCrypto/SwiftCrypto/Models/CoinDetailModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "75C3B9DD-4AAD-40D4-80B1-CBCB649F9C68 - ebb46706b0db980a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftCrypto.CoinDetailModel.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "SwiftCrypto"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harshavardhanravipati/Desktop/project/SwiftCrypto/SwiftCrypto/Models/CoinDetailModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "198"
+                  endingLineNumber = "198"
+                  offsetFromSymbolStart = "324">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
