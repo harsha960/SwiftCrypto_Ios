@@ -9,11 +9,19 @@ import Foundation
 import Combine
 
 class HomeViewModel: ObservableObject {
+<<<<<<< HEAD
     @Published var statistical: [StasticalModel] = []
+=======
+    @Published var statistical: [StasticalModel] = [StasticalModel(title: "Title", value: "Value", PerecentageChange: 1),
+                                         StasticalModel(title: "Title", value: "Value"),
+                                         StasticalModel(title: "Title", value: "Value"),
+                                         StasticalModel(title: "Title", value: "Value", PerecentageChange: -7),]
+>>>>>>> dffd75de0a984333e233edd3a4ff99ffb8e1b4af
     
     @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
     @Published var searchText: String = ""
+<<<<<<< HEAD
     @Published var isLoading: Bool = false
     @Published var sortOption: SortOption = .holdings
     private var CoindataSerivce = coinDataService()
@@ -24,6 +32,11 @@ class HomeViewModel: ObservableObject {
     enum SortOption{
         case rank,rankReversed,holdings,holdingsReversed,price,priceReversed
     }
+=======
+    private var CoindataSerivce = coinDataService()
+    private var MarketDataSerive = MarketDataService()
+    private var cancellables = Set<AnyCancellable>()
+>>>>>>> dffd75de0a984333e233edd3a4ff99ffb8e1b4af
     init () {
         addSubscribers()
     }
@@ -35,13 +48,20 @@ class HomeViewModel: ObservableObject {
             }
             .store(in: &cancellables)
         $searchText
+<<<<<<< HEAD
             .combineLatest(CoindataSerivce.$allCoins, $sortOption)
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
             .map(filterandsortCoins)
+=======
+            .combineLatest(CoindataSerivce.$allCoins)
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .map(filteredCoins)
+>>>>>>> dffd75de0a984333e233edd3a4ff99ffb8e1b4af
             .sink { [weak self] (returnedCoins) in
                 self?.allCoins = returnedCoins
             }
             .store(in: &cancellables)
+<<<<<<< HEAD
         //updates Portfolio Coins
         $allCoins
             .combineLatest(portfolioDataService.$savedEntities)
@@ -56,10 +76,15 @@ class HomeViewModel: ObservableObject {
         //update market data
         MarketDataSerive.$MarketData
             .combineLatest($portfolioCoins)
+=======
+        //update market data
+        MarketDataSerive.$MarketData
+>>>>>>> dffd75de0a984333e233edd3a4ff99ffb8e1b4af
             .map(mapGlobalMarketData)
             
             .sink { [weak self] (returnedStas) in
                 self?.statistical = returnedStas
+<<<<<<< HEAD
                 self?.isLoading = false
             }
             .store(in: &cancellables)
@@ -108,6 +133,15 @@ class HomeViewModel: ObservableObject {
         default :
             return coins
         }
+=======
+            }
+            .store(in: &cancellables)
+        
+        
+        
+        
+        
+>>>>>>> dffd75de0a984333e233edd3a4ff99ffb8e1b4af
     }
     private func filteredCoins(text: String,coins: [CoinModel]) -> [CoinModel] {
         guard !text.isEmpty else{
@@ -121,6 +155,7 @@ class HomeViewModel: ObservableObject {
         }
         
     }
+<<<<<<< HEAD
     private func mapAllCoinsToPortfolioCoins(allCoins: [CoinModel], portfolioCoins: [PortfolioEntity] ) -> [CoinModel]
     {
         allCoins
@@ -134,6 +169,10 @@ class HomeViewModel: ObservableObject {
     }
     
     private func mapGlobalMarketData(MarketDataModel: MarketDataModel?, portfolioCoins: [CoinModel]) -> [StasticalModel]
+=======
+    
+    private func mapGlobalMarketData(MarketDataModel: MarketDataModel?) -> [StasticalModel]
+>>>>>>> dffd75de0a984333e233edd3a4ff99ffb8e1b4af
     {
         var stats: [StasticalModel] = []
         guard let data = MarketDataModel else { return stats }
@@ -143,6 +182,7 @@ class HomeViewModel: ObservableObject {
         let volume = StasticalModel(title: "24 Volume", value: data.volume)
         stats.append(volume)
         let BitcoinDominance = StasticalModel(title: "Btc Dominance", value: data.BtcDominance)
+<<<<<<< HEAD
         let portFolioValue =
             portfolioCoins
                 .map { $0.currentHoldingsValue }
@@ -158,6 +198,9 @@ class HomeViewModel: ObservableObject {
             .reduce(0, + )
         let percentChange = ((portFolioValue-previousValue)/previousValue)*100
         let portfolio = StasticalModel(title: "Portfolio", value: portFolioValue.asCurrency2Decimals(), PerecentageChange: percentChange)
+=======
+        let portfolio = StasticalModel(title: "Portfolio", value: "$0.00", PerecentageChange: 0)
+>>>>>>> dffd75de0a984333e233edd3a4ff99ffb8e1b4af
         stats.append(contentsOf: [
             marketCap,
             volume,
@@ -169,4 +212,7 @@ class HomeViewModel: ObservableObject {
 }
 
 
+<<<<<<< HEAD
  
+=======
+>>>>>>> dffd75de0a984333e233edd3a4ff99ffb8e1b4af
